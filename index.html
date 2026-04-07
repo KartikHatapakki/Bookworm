@@ -75,38 +75,29 @@
         }
         nav.top .right a:hover { color: var(--text); }
 
-        /* ── Hero ── */
+        /* ── Hero (left-aligned) ── */
         main {
             flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
-            padding: 60px 32px 120px 32px;
-            text-align: center;
-            max-width: 920px;
+            padding: 60px 40px 120px 40px;
+            text-align: left;
+            max-width: 1280px;
+            width: 100%;
             margin: 0 auto;
-        }
-
-        .logo-large {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 56px;
-            animation: float 7s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50%      { transform: translateY(-5px); }
         }
 
         h1.headline {
             font-family: 'Fraunces', Georgia, serif;
             font-weight: 400;
-            font-size: clamp(48px, 8vw, 92px);
+            font-size: clamp(48px, 8vw, 96px);
             line-height: 1.04;
             letter-spacing: -2px;
-            margin-bottom: 36px;
+            margin-bottom: 32px;
             color: var(--text);
+            max-width: 14ch;
         }
 
         p.lede {
@@ -116,14 +107,14 @@
             color: var(--text-dim);
             line-height: 1.6;
             max-width: 540px;
-            margin-bottom: 64px;
+            margin-bottom: 56px;
         }
 
         .buttons {
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .btn {
             display: inline-flex;
@@ -164,12 +155,15 @@
 
         /* ── Footer ── */
         footer {
-            text-align: center;
-            padding: 36px 32px 44px 32px;
+            padding: 36px 40px 44px 40px;
             border-top: 1px solid var(--rule);
             color: var(--text-faint);
             font-size: 13px;
             font-family: 'Inter', sans-serif;
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
         }
         footer p { margin: 4px 0; }
         footer .heart { color: var(--coral); }
@@ -179,11 +173,11 @@
             nav.top { padding: 22px 22px; }
             nav.top .right { gap: 18px; }
             main { padding: 40px 22px 80px 22px; }
-            .logo-large { width: 100px; height: 100px; margin-bottom: 40px; }
-            h1.headline { letter-spacing: -1.4px; margin-bottom: 28px; }
-            p.lede { margin-bottom: 44px; }
+            h1.headline { letter-spacing: -1.4px; margin-bottom: 24px; }
+            p.lede { margin-bottom: 40px; }
             .buttons { flex-direction: column; width: 100%; max-width: 320px; gap: 12px; }
             .btn { width: 100%; justify-content: center; padding: 17px 28px; }
+            footer { padding: 30px 22px 36px 22px; }
         }
     </style>
 </head>
@@ -199,10 +193,8 @@
     </nav>
 
     <main>
-        <img class="logo-large" src="logo.png" alt="Bookworm" />
-
         <h1 class="headline">A quiet place<br/>for readers.</h1>
-        <p class="lede">An EPUB and PDF reader for Android. No ads. No accounts. No tracking. The internet is optional, and reading is the point.</p>
+        <p class="lede">Just reading is the point.</p>
 
         <div class="buttons">
             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bookwormapp.reader">
