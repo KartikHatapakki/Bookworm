@@ -58,7 +58,9 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow-x: hidden;
+            /* clip, not hidden — 'hidden' would create a scroll
+               container on body and break position: sticky. */
+            overflow-x: clip;
         }
         html {
             -webkit-text-size-adjust: none;
