@@ -220,37 +220,38 @@
 
         <section class="chapter">
             <h2>Introduction</h2>
-            <p>This document explains how Bookworm — a reading application for Android — handles your information. The same content is also available inside the application itself.</p>
-            <p>The single most important thing to know: Bookworm is designed to operate entirely on your device. Your books, your reading progress, and the time you spend reading never need to leave your device for the application to function.</p>
+            <p>This is the privacy policy for Bookworm — an Android book reader I built and maintain on my own. The same content is also available inside the app itself.</p>
+            <p>The single most important thing to know: Bookworm is designed to operate entirely on your device. Your books, your reading progress, and the time you spend reading never need to leave your device for the app to do its job.</p>
         </section>
 
         <section class="chapter">
             <h2>Local data and storage</h2>
             <p>Your library lives entirely on your device — the books you have added, your reading position in each one, the time you have spent reading, and your display preferences. All of it is stored in Bookworm's private application storage on your phone.</p>
-            <p>There is no cloud synchronisation, no online account system, and no server on our end that receives any of this. Bookworm contains no code to communicate with such a system.</p>
-            <p>If you uninstall Bookworm or clear its data through your device settings, your library and reading history are removed with it. No backups are retained.</p>
+            <p>There is no cloud synchronisation, no online account system, and no server on my end that receives any of this. I do not run that kind of infrastructure, and Bookworm contains no code to talk to one.</p>
+            <p>If you uninstall Bookworm or clear its data through your device settings, your library and reading history are removed with it. I keep no backups.</p>
         </section>
 
         <section class="chapter">
             <h2>Network access and cover artwork</h2>
-            <p>Bookworm uses the internet for one thing: retrieving cover artwork for the books in your library, so each book can be visually identified at a glance.</p>
-            <p>When you add a new book, the application sends basic, non-personal information about it — typically the title, and where available the author — to publicly available catalog services to locate a matching cover image. These requests contain no user identifiers, no account details, no device fingerprints, and no information about how or when you read.</p>
+            <p>Bookworm uses the internet for one thing: retrieving cover artwork for the books in your library, so each one can be visually identified at a glance.</p>
+            <p>When you add a new book, the app sends basic, non-personal information about it — typically the title, and where available the author — to publicly available catalog services to locate a matching cover image. These requests contain no user identifiers, no account details, no device fingerprints, and no information about how or when you read.</p>
             <p>Once a cover has been retrieved it is cached locally, and Bookworm continues to function normally if your device is offline; only cover images are replaced with placeholders.</p>
-            <p>Bookworm does not claim ownership of any cover artwork. All rights remain with the publishers, authors, and catalog providers from which the images originate. The artwork is never redistributed or used in any advertising context — Bookworm contains no advertising of any kind.</p>
+            <p>Bookworm does not claim ownership of any cover artwork — and neither do I. All rights remain with the publishers, authors, and catalog providers from which the images originate. The artwork is never redistributed or used in any advertising context, because Bookworm contains no advertising of any kind.</p>
         </section>
 
         <section class="chapter">
-            <h2>What we do not collect</h2>
-            <p>Bookworm contains no analytics frameworks, no advertising libraries, no crash reporters that transmit data externally, and no telemetry of any kind. These are not disabled behind a setting — they are not present in the application at all.</p>
-            <p>As a direct consequence, the application does not know which books you open, how long you spend reading, what time of day you read, or what device you are using. It does not assign user identifiers. There are no cookies, no fingerprinting, and no background processes that contact external services.</p>
+            <h2>What I don't collect</h2>
+            <p>Bookworm contains no analytics frameworks, no advertising libraries, no crash reporters that transmit data externally, and no telemetry of any kind. These are not disabled behind a setting — they are simply not in the app at all.</p>
+            <p>As a direct result, the app does not know which books you open, how long you spend reading, what time of day you read, or what device you are using. It does not assign user identifiers. There are no cookies, no fingerprinting, and no background processes that contact external services.</p>
+            <p>Put plainly: there is no mechanism through which any of this could leave your device, because I never built one.</p>
         </section>
 
         <section class="chapter">
             <h2>Permissions</h2>
-            <p>Bookworm declares only the Android permissions it actively requires.</p>
+            <p>Bookworm declares only the Android permissions it actually needs.</p>
             <p><strong>Internet access</strong> is used solely to fetch book cover images, as described above.</p>
             <p>Opening books does not require a storage permission. Books are selected through Android's system file picker, and Bookworm receives only the specific file you choose. The same applies when opening a book from a file manager or a share intent.</p>
-            <p>The application does not request access to your contacts, location, microphone, camera, messages, call logs, accounts, or any background activity.</p>
+            <p>The app does not request access to your contacts, location, microphone, camera, messages, call logs, accounts, or any background activity.</p>
         </section>
 
         <section class="chapter">
@@ -260,17 +261,19 @@
         </section>
 
         <section class="chapter">
-            <h2>Our approach</h2>
-            <p>Bookworm is built and maintained by an independent developer, and is currently available for Android phones only. Its feature set is intentionally small and focused on the act of reading. The decision to keep it local-only is deliberate, and is what allows it to remain simple, transparent, and easy to verify.</p>
+            <h2>My approach</h2>
+            <p>A short, honest aside.</p>
+            <p>Bookworm is a solo project. I am the only person building, designing, and maintaining it. It is currently available for Android phones only, and the feature set is intentionally small and focused on the act of reading.</p>
+            <p>Keeping the app local-only — no accounts, no cloud, no analytics — is a deliberate choice. Each of those would have meant another system to maintain, another place your data could sit waiting to be lost, and another reason to ask you for something I do not strictly need. Local-only keeps Bookworm simple, transparent, and easy for one person to actually stand behind.</p>
         </section>
 
         <section class="chapter">
             <h2>Contact</h2>
-            <p>Questions, concerns, and feedback can be sent through the contact options listed on the Google Play Store page for Bookworm. You can also reach the developer directly on LinkedIn — quicker, and ideal if you would like a personal reply. Any future revisions to this policy will be published at this same URL and reflected within the application itself.</p>
+            <p>Questions, concerns, and feedback can be sent through the contact options on Bookworm's Google Play Store page, or you can reach me directly on LinkedIn — I read everything that comes in and try to respond honestly. Any future revisions to this policy will be published at this same URL and reflected within the app itself.</p>
             <p>
                 <a class="dotted" href="https://play.google.com/store/apps/details?id=com.bookwormapp.reader">Open the Google Play Store listing</a>
                 &nbsp;·&nbsp;
-                <a class="dotted" href="https://www.linkedin.com/in/kartikhatapakki/">Message on LinkedIn</a>
+                <a class="dotted" href="https://www.linkedin.com/in/kartikhatapakki/">Message me on LinkedIn</a>
             </p>
         </section>
     </article>
