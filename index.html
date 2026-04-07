@@ -39,6 +39,23 @@
             --coral-hover: #ff5573;
             --rule: rgba(245, 243, 238, 0.08);
         }
+        /* ── Cross-document view transitions ──
+           Chrome 126+ / Safari 18+ crossfade pages on link click.
+           The site-nav is named so it stays visually pinned across
+           navigations instead of fading. Older browsers fall back
+           to instant navigation. */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation-duration: 320ms;
+            animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+        }
+        ::view-transition-group(site-nav),
+        ::view-transition-old(site-nav),
+        ::view-transition-new(site-nav) {
+            animation: none;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body {
             background: var(--bg);
@@ -62,6 +79,7 @@
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             border-bottom: 1px solid var(--rule);
+            view-transition-name: site-nav;
         }
         .nav-inner {
             display: flex;
