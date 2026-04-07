@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Bookworm — A quiet place for readers</title>
     <meta name="description" content="Bookworm is a calm Android reader for EPUB and PDF books. No ads, no accounts, no tracking." />
 
@@ -57,9 +57,13 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            /* Stop mobile browsers from auto-shrinking text */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
         ::selection { background: var(--coral); color: var(--bg); }
 
@@ -132,7 +136,7 @@
         h1.headline {
             font-family: 'Fraunces', Georgia, serif;
             font-weight: 400;
-            font-size: clamp(48px, 8vw, 96px);
+            font-size: clamp(56px, 9vw, 104px);
             line-height: 1.04;
             letter-spacing: -2px;
             margin-bottom: 32px;
@@ -142,7 +146,7 @@
 
         p.lede {
             font-family: 'Inter', sans-serif;
-            font-size: clamp(17px, 1.6vw, 20px);
+            font-size: clamp(18px, 1.6vw, 21px);
             font-weight: 400;
             color: var(--text-dim);
             line-height: 1.6;
@@ -213,14 +217,49 @@
 
         /* ── Mobile ── */
         @media (max-width: 640px) {
-            .nav-inner { padding: 14px 22px; }
+            .nav-inner { padding: 18px 22px; }
+            nav.top .brand .mark { width: 34px; height: 34px; }
+            nav.top .brand .name { font-size: 22px; }
             nav.top .right { gap: 18px; }
-            main { padding: 40px 22px 80px 22px; }
-            h1.headline { letter-spacing: -1.4px; margin-bottom: 24px; }
-            p.lede { margin-bottom: 40px; }
-            .buttons { flex-direction: column; width: 100%; max-width: 320px; gap: 12px; }
-            .btn { width: 100%; justify-content: center; padding: 17px 28px; }
-            footer { padding: 30px 22px 36px 22px; }
+            nav.top .right a { font-size: 15px; }
+
+            main {
+                padding: 56px 22px 96px 22px;
+                justify-content: flex-start;
+            }
+            h1.headline {
+                font-size: clamp(56px, 14vw, 84px);
+                letter-spacing: -1.4px;
+                margin-bottom: 28px;
+                max-width: none;
+            }
+            p.lede {
+                font-size: 18px;
+                margin-bottom: 44px;
+                max-width: none;
+            }
+
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 360px;
+                gap: 12px;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 18px 28px;
+                font-size: 16px;
+            }
+            .btn-small {
+                padding: 16px 22px;
+                font-size: 14px;
+            }
+
+            footer {
+                padding: 32px 22px 40px 22px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
