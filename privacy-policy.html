@@ -3,194 +3,251 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bookworm — Privacy Policy</title>
-    <meta name="description" content="The privacy policy for Bookworm, a quiet Android book reader. No analytics, no tracking, no accounts. Your library stays on your device." />
+    <title>Privacy Policy — Bookworm</title>
+    <meta name="description" content="The privacy policy for Bookworm, an Android book reader. No analytics, no tracking, no accounts. Your library stays on your device." />
+    <meta name="theme-color" content="#1c1c1a" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --bg: #161616;
-            --text: rgba(255, 255, 255, 0.95);
-            --text-dim: rgba(255, 255, 255, 0.85);
-            --text-faint: rgba(255, 255, 255, 0.45);
-            --accent: #5b7fe0;
-            --rule: rgba(255, 255, 255, 0.08);
+            --bg: #1c1c1a;
+            --text: #f5f3ee;
+            --text-dim: rgba(245, 243, 238, 0.72);
+            --text-faint: rgba(245, 243, 238, 0.4);
+            --coral: #ff3d5c;
+            --rule: rgba(245, 243, 238, 0.08);
         }
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body {
-            margin: 0;
-            padding: 0;
             background: var(--bg);
-            color: var(--text-dim);
+            color: var(--text);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            font-size: 17px;
-            line-height: 1.75;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        main {
-            max-width: 680px;
+        ::selection { background: var(--coral); color: var(--bg); }
+
+        /* ── Top nav (matches landing page) ── */
+        nav.top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 40px;
+            max-width: 1280px;
+            width: 100%;
             margin: 0 auto;
-            padding: 80px 28px 120px 28px;
         }
-        header.cover {
-            text-align: center;
-            margin-bottom: 80px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid var(--rule);
+        nav.top .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
         }
-        .cover .label {
+        nav.top .brand .mark {
+            width: 28px;
+            height: 28px;
+        }
+        nav.top .brand .name {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: -0.3px;
+        }
+        nav.top .right {
+            display: flex;
+            gap: 28px;
+        }
+        nav.top .right a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.16s;
+        }
+        nav.top .right a:hover { color: var(--text); }
+
+        /* ── Article ── */
+        article {
+            flex: 1;
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 48px 40px 120px 40px;
+        }
+
+        .meta {
             display: inline-block;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-faint);
             font-size: 11px;
             font-weight: 500;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.6px;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
-        .cover h1 {
-            font-size: 44px;
-            font-weight: 600;
+
+        h1.page-title {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(48px, 7vw, 84px);
+            line-height: 1.04;
+            letter-spacing: -1.6px;
+            margin-bottom: 14px;
             color: var(--text);
-            margin: 0 0 12px 0;
-            letter-spacing: -0.5px;
-            line-height: 1.1;
         }
-        .cover .subtitle {
-            color: var(--text-faint);
-            font-size: 15px;
-            margin: 0;
+
+        p.subtitle {
+            color: var(--text-dim);
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 72px;
         }
+
         section.chapter {
-            margin-bottom: 64px;
+            margin-bottom: 56px;
         }
         section.chapter h2 {
-            font-size: 28px;
-            font-weight: 600;
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 500;
+            font-size: 26px;
             color: var(--text);
-            margin: 0 0 28px 0;
-            letter-spacing: -0.3px;
-            line-height: 1.3;
+            margin-bottom: 22px;
+            letter-spacing: -0.4px;
+            line-height: 1.25;
         }
         section.chapter p {
-            margin: 0 0 1.2em 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.78;
             color: var(--text-dim);
+            margin-bottom: 1.1em;
         }
+        section.chapter p:last-child { margin-bottom: 0; }
+        section.chapter strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
         a.dotted {
-            color: var(--accent);
+            color: var(--coral);
             text-decoration: none;
-            border-bottom: 1.5px dotted var(--accent);
+            border-bottom: 1.5px dotted var(--coral);
             padding-bottom: 1px;
             font-weight: 500;
+            transition: border-bottom-style 0.15s;
         }
-        a.dotted:hover {
-            border-bottom-style: solid;
-        }
+        a.dotted:hover { border-bottom-style: solid; }
+
+        /* ── Footer ── */
         footer {
-            text-align: center;
-            padding-top: 40px;
+            padding: 36px 40px 44px 40px;
             border-top: 1px solid var(--rule);
             color: var(--text-faint);
             font-size: 13px;
+            font-family: 'Inter', sans-serif;
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
         }
         footer p { margin: 4px 0; }
-        @media (max-width: 600px) {
-            main { padding: 56px 24px 100px 24px; }
-            .cover h1 { font-size: 34px; }
-            section.chapter h2 { font-size: 24px; }
-            html, body { font-size: 16px; }
+        footer .heart { color: var(--coral); }
+
+        @media (max-width: 640px) {
+            nav.top { padding: 22px 22px; }
+            nav.top .right { gap: 18px; }
+            article { padding: 32px 22px 96px 22px; }
+            h1.page-title { letter-spacing: -1.2px; }
+            p.subtitle { margin-bottom: 56px; }
+            section.chapter { margin-bottom: 44px; }
+            section.chapter h2 { font-size: 22px; }
+            footer { padding: 30px 22px 36px 22px; }
         }
-        ::selection { background: var(--accent); color: var(--bg); }
     </style>
 </head>
 <body>
-    <main>
-        <header class="cover">
-            <div class="label">Last updated · Nov 2025</div>
-            <h1>Privacy Policy</h1>
-            <p class="subtitle">Bookworm — a quiet Android book reader</p>
-        </header>
+    <nav class="top">
+        <a class="brand" href="./">
+            <img class="mark" src="logo.png" alt="" />
+            <span class="name">Bookworm</span>
+        </a>
+        <div class="right">
+            <a href="./">Home</a>
+        </div>
+    </nav>
+
+    <article>
+        <div class="meta">Last updated · November 2025</div>
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="subtitle">How Bookworm handles your data — in plain language, and as briefly as honestly possible.</p>
 
         <section class="chapter">
-            <h2>Why in the hell would you read a privacy policy?</h2>
-            <p>Honestly? Almost nobody does. They get scrolled past, agreed to under duress, and forgotten by the time the next screen loads. They are written by lawyers, for lawyers, in a language only lawyers actually want to read.</p>
-            <p>But — oh, right. You're a reader.</p>
-            <p>And readers, as it turns out, do read things. Even small things. Even slightly inconvenient things. Especially when those things are sitting inside the same quiet reader you opened to spend a little time with a book. So I figured: if you're the kind of person who reads, you deserve a privacy policy that's actually worth reading.</p>
-            <p>This is that policy. It lives inside the reader because the way you read matters here too. Each chapter explains one small thing about how the app handles your data — and, more importantly, what it deliberately does not do. There is no fine print, no legalese, and no clever phrasing meant to make you give up halfway through.</p>
-            <p>If you remember only one thing after all this, let it be this: the app is built to work offline first. Your books, your pages, your time with them — none of it ever needs to leave the device in your hand for the app to do its job.</p>
+            <h2>Introduction</h2>
+            <p>This document explains how Bookworm — a reading application for Android — handles your information. It is intentionally short and written in plain language. The same content is also available inside the application itself.</p>
+            <p>The single most important thing to know: Bookworm is designed to operate entirely on your device. Your books, your reading progress, and the time you spend reading never need to leave your device for the application to function.</p>
         </section>
 
         <section class="chapter">
-            <h2>Your library, your shelf</h2>
-            <p>Imagine someone walked into your home, scanned every book on your shelf, took notes on which page you dog-eared, and then quietly slipped it all into a filing cabinet somewhere. Slightly creepy, right?</p>
-            <p>That is the opposite of what this app does. Your library lives entirely on your device — the books you have added, where you left off in each one, the time you have spent with them, and your reading preferences. All of it sits quietly in this app's private storage on your phone, and nowhere else.</p>
-            <p>There is no cloud sync, no online profile, and no server on my end that quietly receives any of it. I did not build that kind of infrastructure, and the app contains no code to talk to one.</p>
-            <p>The trade-off is simple, and honest: you stay in full control. If you uninstall the app, or clear its data from your system settings, your library and reading history go with it. I keep no backups and cannot restore anything once it is gone. Just like a real shelf — the books on it are only the ones you put there.</p>
+            <h2>Local data and storage</h2>
+            <p>Your library is stored entirely on your device. This includes the books you have added, your reading position in each one, the cumulative time you have spent reading, and your display preferences. All of this information resides in the application's private storage on your phone.</p>
+            <p>Bookworm does not operate any server that receives this data. There is no cloud synchronisation, no online account system, and no infrastructure capable of storing personal information about your reading habits. The application contains no code to communicate with any such system.</p>
+            <p>If you uninstall Bookworm or clear its data through your device settings, your library and reading history are removed with it. No backups are retained, and no data can be recovered after deletion.</p>
         </section>
 
         <section class="chapter">
-            <h2>Confession: it does use the internet, briefly</h2>
-            <p>Okay. I should be upfront about this.</p>
-            <p>There is exactly one thing this app uses the internet for, and it is not what you might be bracing yourself for. It is cover art.</p>
-            <p>A book without its cover is just a rectangle with a title on it. Less of a shelf, more of a spreadsheet. So when you add a new book to your library, the app quietly asks a few public book-cover catalogs whether they have a matching image, and if they do, it downloads one. That is the entire extent of the conversation.</p>
-            <p>These requests carry nothing about you. No identifier. No account. No device fingerprint. No record of what you read or when. Just the title (and sometimes the author) of the book that needs a picture.</p>
-            <p>Once a cover has been fetched, it is kept on your device so the same request never has to be made again. And if your phone is offline, or if you would simply rather the app stayed off the network entirely, the app keeps working completely normally. The only difference is that some books will show a plain placeholder instead of a cover. The reading is exactly the same.</p>
+            <h2>Network access</h2>
+            <p>Bookworm uses the internet for a single purpose: retrieving cover artwork for the books in your library.</p>
+            <p>When you add a new book, the application sends basic, non-personal book information — typically the title and, where available, the author — to publicly available catalog services in order to locate a matching cover image. These requests contain no user identifiers, no account details, no device fingerprints, and no information about how or when you read. They are not used for tracking, profiling, or any form of analytics.</p>
+            <p>Once a cover has been retrieved, it is cached locally so the same request is not made again. If your device is offline, or you choose to restrict the application's network access, Bookworm continues to function normally; only cover images are replaced with placeholders.</p>
         </section>
 
         <section class="chapter">
-            <h2>What I don't collect (which is most of it)</h2>
-            <p>This is the chapter where most privacy policies get suspiciously vague. This one is going to do the opposite.</p>
-            <p>The app does not collect analytics. It does not show advertising. It does not track you. It does not quietly call home in the background. None of these things are toggled off behind a setting somewhere — they are simply not in the app at all. Not in the build, not in the dependencies, not in any hidden corner.</p>
-            <p>As a direct result, the app does not know which books you open. It does not know how long you spend in them. It does not know what time of day you read, what device you are on, what country you are in, or how often you come back. It does not know who you are, because there is no account. It does not assign you an identifier, because there is no identifier to assign.</p>
-            <p>Put plainly: there is no pipe through which this kind of information could leave your device, because I never built the pipe in the first place. There is nothing for me to misuse, nothing to lose in a breach, and nothing for anyone else to come asking me for. The best way to protect data is to never collect it. That is the trick I am using.</p>
+            <h2>What we do not collect</h2>
+            <p>Bookworm contains no analytics frameworks, no advertising libraries, no crash reporters that transmit data externally, and no telemetry systems of any kind. These are not disabled behind a setting — they are not present in the application at all.</p>
+            <p>As a direct consequence, the application does not know which books you open, how long you spend reading, what time of day you read, what device you are using, what region you are in, or how frequently you return. It does not assign user identifiers, because there are none to assign. There are no cookies, no fingerprinting, and no background processes that contact external services.</p>
+            <p>In summary, there is no mechanism through which personal information could leave your device — because no such mechanism was built.</p>
         </section>
 
         <section class="chapter">
-            <h2>Permissions: the short list</h2>
-            <p>Android politely asks each app to declare what it needs. Most apps treat that as a wish list. I treat it as a checklist of things I would rather not have.</p>
-            <p>The app needs internet access for exactly one thing: fetching book cover images, the same one I confessed to two chapters ago. Not for analytics. Not for talking to any private server. Not for collecting anything.</p>
-            <p>It does not need a storage permission to open your books. When you pick a book, you do it through Android's own file picker, and the app receives only that one specific file. The same is true if you open a book from a file manager or share one in from another app — the app only ever sees what you have explicitly handed to it. Nothing else on your device is visible to it.</p>
-            <p>And here is the slightly longer list of what the app does not ask for: your contacts, your location, your microphone, your camera, your messages, your call logs, your accounts, or anything happening in the background on your phone. None of those are needed to read a book. So none of them are touched.</p>
+            <h2>Permissions</h2>
+            <p>Bookworm declares only the Android permissions it actively requires.</p>
+            <p><strong>Internet access</strong> is used solely to fetch book cover images from public catalog services, as described in the Network access section. It is not used for analytics, communication with any private server, or data collection of any kind.</p>
+            <p>Opening books does not require a storage permission. Books are selected through Android's system file picker, and the application receives only the specific file you choose. The same applies when opening a book from a file manager or a share intent — Bookworm has access only to the files you have explicitly provided.</p>
+            <p>The application does not request access to your contacts, location, microphone, camera, messages, call logs, accounts, or any background activity. None of these are necessary to read a book.</p>
         </section>
 
         <section class="chapter">
-            <h2>About the cover artwork</h2>
-            <p>A book without its cover is just a rectangle. You already know this, because you are a reader, and you have probably stared at a Goodreads list of plain titles and felt how flat that is.</p>
-            <p>The cover images shown beside your books in this app are fetched from public book-cover catalogs, so that your library can feel like a shelf instead of a list. They are downloaded only when a new book is added, and only to be shown next to that specific book.</p>
-            <p>The app does not claim ownership of any cover artwork. All rights remain with the publishers, authors, and catalog providers the images come from. The artwork is used only inside your own library on your own device — never redistributed, never repackaged, and never placed in advertising. (Because, again: there is no advertising in this app at all.)</p>
+            <h2>Cover artwork</h2>
+            <p>Cover images displayed alongside your books are retrieved from publicly available catalog services. They are used solely to help you identify books within your personal library on your own device.</p>
+            <p>Bookworm does not claim ownership of any cover artwork. All rights remain with the publishers, authors, and catalog providers from which the images originate. The artwork is never redistributed, repackaged, or used in any commercial or advertising context — Bookworm contains no advertising of any kind.</p>
         </section>
 
         <section class="chapter">
             <h2>Attribution</h2>
-            <p>Crediting where credit is due — this one's short.</p>
-            <p>Some of the book cover artwork shown in this app is provided by Apple, through the Apple Books / iTunes catalog. Those covers are fetched solely to identify the books in your personal library, and all rights to that artwork remain with Apple and the original copyright holders.</p>
+            <p>Some cover artwork displayed in Bookworm is provided by Apple, through the Apple Books and iTunes catalog. These images are retrieved solely to identify books within your personal library, and all rights to that artwork remain with Apple and the original copyright holders.</p>
             <p>Apple Books is a trademark of Apple Inc.</p>
         </section>
 
         <section class="chapter">
-            <h2>Why the app is the way it is</h2>
-            <p>A short, honest aside — because the choices behind an app are part of how it treats you, and a privacy policy is a strange place to leave them out.</p>
-            <p>I love reading. I love building things. I love designing things. So I built this one for the readers out there — the people who want a quiet, dependable place to spend time with a book, and not much else. Right now it is just Android, just phones, and just the features you see in front of you. That is on purpose. A reader app should feel calm and finished in the small corner of life it occupies, even if that corner is small, rather than half-finished and stretched thin everywhere at once.</p>
-            <p>That same thinking is why there are no accounts, no cloud, and no analytics. Every one of those things would have meant another system to maintain, another place your data could sit waiting to be lost, and another reason to ask you for something I did not strictly need. Keeping the app local kept it honest — and kept it simple enough that I can actually stand behind every line of it.</p>
-            <p>Every feature in this app earned its place by serving the act of reading itself. The ones I quietly left out were left out for the same reason — not to take anything away, but to keep the whole thing pointed at one job. The hope is that what is left feels less like a tool with options, and more like a quiet room with a chair and a lamp.</p>
-            <p>If there is a feature you wish this app had — a format it does not yet open, a setting it does not yet offer, a small thing that would make your reading just a bit nicer — please tell me. Every request gets read, and the ones that fit the spirit of the app have a real chance of showing up in a future version. The best feature requests this app has ever had came from readers, not from me.</p>
+            <h2>Our approach</h2>
+            <p>Bookworm is built and maintained by an independent developer and is currently available for Android phones only. Its feature set is intentionally small and focused on the act of reading.</p>
+            <p>The decision not to include accounts, cloud synchronisation, or analytics is deliberate. Each of these would have required additional infrastructure, additional places where user data could reside, and additional permissions or sign-ups — none of which are necessary for the application to do its job. Keeping Bookworm local-only allows it to remain simple, transparent, and easy to verify.</p>
         </section>
 
         <section class="chapter">
-            <h2>Getting in touch</h2>
-            <p>You made it to the last chapter. Genuinely impressive — finishing a privacy policy from start to finish is the kind of thing only a reader would actually do.</p>
-            <p>If you have a question about this policy, a concern about how the app handles something, or simply a thought to share, the way to reach out is through the contact options on the app's Google Play Store page.</p>
-            <p>Because there are no accounts and no in-app messaging, the Play Store listing is the one clearly-named place where messages can come in. I read what is sent there, and try to respond honestly. If something in the app is doing the wrong thing, I want to know — that is genuinely how this gets better.</p>
-            <p>Any future changes to this policy will appear right here, the same chapter-by-chapter way you are reading it now. No surprise pop-ups. No consent dialogs designed to be dismissed. No fine print buried in a settings screen.</p>
-            <p><a class="dotted" href="https://play.google.com/store/apps/details?id=com.bookwormapp.reader">Open the Play Store listing</a></p>
-            <p style="margin-top: 2em;">Made with ♥ for readers.</p>
+            <h2>Contact</h2>
+            <p>Questions, concerns, and feedback regarding this policy or the application itself can be sent through the contact options listed on the Google Play Store page for Bookworm.</p>
+            <p>Because Bookworm has no user accounts and no in-app messaging, the Google Play Store listing is the primary channel for inbound communication. Any future revisions to this policy will be published at this same URL and reflected within the application itself.</p>
+            <p><a class="dotted" href="https://play.google.com/store/apps/details?id=com.bookwormapp.reader">Open the Google Play Store listing</a></p>
         </section>
+    </article>
 
-        <footer>
-            <p>Bookworm — Privacy Policy</p>
-            <p>Last updated November 2025</p>
-        </footer>
-    </main>
+    <footer>
+        <p>Made with <span class="heart">♥</span> for readers</p>
+    </footer>
 </body>
 </html>

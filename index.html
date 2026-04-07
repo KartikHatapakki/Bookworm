@@ -143,6 +143,20 @@
             height: 20px;
             flex-shrink: 0;
         }
+        .btn-small {
+            padding: 13px 22px;
+            font-size: 13px;
+            color: var(--text-dim);
+            border-color: rgba(245, 243, 238, 0.18);
+        }
+        .btn-small:hover {
+            color: var(--text);
+        }
+        .btn-small .li-icon {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
 
         /* ── Footer ── */
         footer {
@@ -189,11 +203,16 @@
 
         <div class="buttons">
             <a class="btn" href="https://play.google.com/store/apps/details?id=com.bookwormapp.reader">
-                <!-- Google Play icon — official 4-color play triangle -->
                 <svg class="gp-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.4 19.2 25.4 35.3v441.3c0 16.1 8.6 28.5 21.6 35.3l256.5-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" fill="#fff"/>
                 </svg>
                 Get it on Google Play
+            </a>
+            <a class="btn btn-small" href="https://www.linkedin.com/in/kartikhatapakki/" target="_blank" rel="noopener">
+                <svg class="li-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" fill="currentColor"/>
+                </svg>
+                Connect with the builder
             </a>
         </div>
     </main>
